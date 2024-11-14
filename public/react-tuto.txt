@@ -1,0 +1,73 @@
+life is unfaire God is fair, 
+nailed 
+
+'I am learning Web Dev'
+  .split(' ')
+  .map(s=>
+    s[0].toUpperCase() 
+    + s.slice(1).toLowerCase())
+  .join(' ')
+
+
+// src/App.js
+import React, { useState } from 'react';
+
+function App() {
+  const [compteur, setCompteur] = useState(0);
+
+  const incrementer = () => {
+    setCompteur(compteur + 1);
+  };
+
+  return (
+    <div>
+      <h1>Compteur : {compteur}</h1>
+      <button onClick={incrementer}>Incrémenter</button>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+WelcomeMessage.js
+import React from 'react';
+
+function WelcomeMessage(props) {
+  return <p>{props.message}</p>; // Utilisation de props.message
+}
+
+export default WelcomeMessage;
+
+
+
+import React from 'react';
+import WelcomeMessage from './WelcomeMessage';
+
+function App() {
+  return (
+    <div>
+      <h1>Bienvenue dans mon application React !</h1>
+      <WelcomeMessage message="Merci de visiter mon site React !" />
+      <WelcomeMessage message="Profitez de votre expérience sur notre site." />
+    </div>
+  );
+}
+
+export default App;
+
+import React, { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0); // Déclare un state appelé "count"
+
+  return (
+    <div>
+      <h1>Compteur : {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Incrémenter</button>
+    </div>
+  );
+}
+
+export default App;
